@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Search results</h1>
+        <form action="/share">
+            <input type="text" name="message"/>
+            <ol>
+        {% for photo in photos %}
+            <li>
+                <input type="checkbox" name="ids" value="{{photo.id}}">
+                {{photo.url}}
+            </li>
+        {% endfor %}
+            </ol>
+            <input type="submit">
+        </form>
+    </body>
+</html>
